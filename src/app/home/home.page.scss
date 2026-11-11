@@ -1,27 +1,81 @@
-#container {
+.tachada {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 32px;
   text-align: center;
+  color: var(--ion-color-medium);
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  ion-icon {
+    font-size: 64px;
+    margin-bottom: 8px;
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.campo {
+  margin-top: 16px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-segment-button {
+  --padding-start: 2px;
+  --padding-end: 2px;
+  min-width: 0;
 }
 
-#container a {
-  text-decoration: none;
+ion-segment-button ion-label {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+
+ion-fab {
+  bottom: calc(var(--ion-safe-area-bottom, 0px) + 16px);
+}
+
+
+.lista {
+  height: 100%;
+
+
+  ::ng-deep .cdk-virtual-scroll-content-wrapper {
+    width: 100%;
+  }
+}
+
+.fila {
+  height: 72px;
+  width: 100%;
+  overflow: hidden;
+
+  ion-item {
+    --min-height: 72px;
+    height: 72px;
+  }
+
+
+  h2,
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.tocable {
+  cursor: pointer;
+}
+
+.btn-limpiar {
+  margin: 6px 12px;
 }
